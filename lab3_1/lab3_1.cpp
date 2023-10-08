@@ -8,20 +8,20 @@ using namespace std;
 
 int main()
 {
+	setlocale(LC_ALL, "ru");
 	int num;
-	bool a = true;
+	bool a = false;
 
 	/*
 	Я использовал while для более корректной работы программы и для того,
 	чтобы убедиться, что пользователь ввел корректные данные
 	*/
 
-	while (a == true)
+	while (a == false)
 	{
-		setlocale(LC_ALL, "ru");
 		cout << "Введите положительное трехзначное число ";
 		cin >> num;
-		if ((num > 0)&&(num/100<10)&&(num>=100))
+		if ((num < 100) || (num >= 1000))
 		{
 			a = false;
 		}
